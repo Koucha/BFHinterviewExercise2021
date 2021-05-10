@@ -1,4 +1,4 @@
 <mat-form-field class="main-form">
-  <mat-label>{{ label }}</mat-label>
+  <mat-label>{{ label | task3validator }}</mat-label>
   <input matInput [ngModel]="inputField" (ngModelChange)="labelChange($event)" placeholder="{{ placeholder }}">
 </mat-form-field>

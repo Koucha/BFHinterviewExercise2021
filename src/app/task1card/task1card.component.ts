@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task1card.component.css']
 })
 export class Task1cardComponent implements OnInit {
-  label = 'Write something in the input field to change this label';
+  label = '';
   placeholder = 'Ex. QED';
   inputField: string;
 
