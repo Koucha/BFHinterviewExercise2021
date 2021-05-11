@@ -13,13 +13,15 @@ export class Task3validatorPipe implements PipeTransform {
 
     // Collect errors
     const errors = new Set<string>();
-    if (isNaN(Number(value))) {
-      errors.add( 'is not an integer' );
-    }
+
     if (value.length < 3) {
       errors.add( 'is too short' );
     }
-    if (value.indexOf('9') === -1) {
+
+    if (isNaN(Number(value))) {
+      errors.add( 'is not an integer' );
+    }
+    else if (value.indexOf('9') === -1) {
       errors.add( 'does not contain a 9' );
     }
 

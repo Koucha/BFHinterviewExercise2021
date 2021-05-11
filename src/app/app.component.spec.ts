@@ -1,12 +1,26 @@
 import { TestBed } from '@angular/core/testing';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
+import { Task1cardComponent } from './task1card/task1card.component';
+import { Task3validatorPipe } from './task3validator.pipe';
+import { MaterialModule } from './material/material.module';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        Task1cardComponent,
+        Task3validatorPipe
       ],
+      imports: [
+        FormsModule,
+        MaterialModule,
+        BrowserAnimationsModule
+      ]
     }).compileComponents();
   });
 
@@ -16,16 +30,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'BFHinterviewExercise'`, () => {
+  it(`should have as title 'BFH interview - Exercise'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('BFHinterviewExercise');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('BFHinterviewExercise app is running!');
+    expect(app.title).toEqual('BFH interview - Exercise');
   });
 });
