@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const MaterialComponents = [
   MatInputModule,
-  MatTabsModule
+  MatTabsModule,
+  MatFormFieldModule
 ];
 
 @NgModule({
